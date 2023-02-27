@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-type blogsContextType =
+export type blogsContextType =
   | []
   | { userId: number; id: number; title: string; body: string }[];
 
