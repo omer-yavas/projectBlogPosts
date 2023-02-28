@@ -1,5 +1,5 @@
 const NoPosts = () => {
-  return <p>There are no posts compatible with this filter</p>;
+  return <p className="nopost">No posts with this title!</p>;
 };
 
 export default NoPosts;

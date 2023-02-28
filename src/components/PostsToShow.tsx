@@ -33,9 +33,8 @@ const PostsToShow: React.FC = () => {
 
   return (
     <div>
-      <h1>OmerY</h1>
+      <h1>BlogCenter-ByYomer</h1>
       <h3>Best Blog of the Year!</h3>
-
       <input onChange={searchHandler} placeholder="Search..." />
       <div>
         <div>

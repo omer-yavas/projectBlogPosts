@@ -14,7 +14,7 @@ export const UiContext = React.createContext<uiContextType>({
 const UiContextProvider: React.FC<Props> = (props) => {
   const [searchText, setSearchText] = useState('');
   const changeSearchText = (text: string) => {
-    setSearchText(text);
+    setSearchText(text.toLowerCase());
   };
 
   return (
