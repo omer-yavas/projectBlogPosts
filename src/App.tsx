@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import DarkMode from './components/DarkMode';
 import PostsToShow from './components/PostsToShow';
 import BlogsContextProvider from './context/blogsContext';
 import FilterContextProvider from './context/filterContext';
@@ -12,6 +12,7 @@ function App() {
         <UiContextProvider>
           <FilterContextProvider>
             <PostsToShow />
+            <DarkMode />
           </FilterContextProvider>
         </UiContextProvider>
       </BlogsContextProvider>

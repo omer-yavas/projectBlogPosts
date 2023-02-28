@@ -15,7 +15,10 @@ const PostsToShow: React.FC = () => {
   const posts = useContext(BlogsContext);
   const uiConfig = useContext(UiContext);
   const filterResult = useContext(FilterContext);
+
   let currentData: blogsContextType = [];
+  const themeClass = uiConfig.darkTheme ? 'dark' : 'light';
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const searchHandler = (event: React.FormEvent<HTMLInputElement>) => {
@@ -32,7 +35,7 @@ const PostsToShow: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={themeClass}>
       <h1>BlogCenter-ByYomer</h1>
       <h3>Best Blog of the Year!</h3>
       <input onChange={searchHandler} placeholder="Search..." />

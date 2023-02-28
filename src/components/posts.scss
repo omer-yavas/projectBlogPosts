@@ -1,3 +1,17 @@
+.light {
+  background-color: aliceblue;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: black;
+  min-height: 100vh;
+  h1,
+  h3 {
+    color: aliceblue;
+  }
+}
+
 h1 {
   font-family: 'Shantell Sans', cursive;
   font-size: 3rem;
@@ -23,6 +37,7 @@ input {
 .nopost {
   text-align: center;
   margin-top: 3rem;
+  color: gray;
 }
 
 .singlepostbox {

@@ -3,12 +3,22 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html {
-  background-color: rgb(205, 255, 245);
+  box-sizing: border-box;
+  background-color: red;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: auto;
 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,4 +30,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  min-height: 100vh;
+  width: auto;
 }
