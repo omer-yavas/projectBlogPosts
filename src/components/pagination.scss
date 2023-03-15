@@ -1,8 +1,14 @@
+.pag-box {
+  background-color: aliceblue;
+  text-align: center;
+  border-radius: 25px;
+  margin: 0rem 11vw;
+}
+
 .pagination-container {
-  display: flex;
+  display: inline-flex;
   list-style-type: none;
   justify-content: center;
-  padding-bottom: 2rem;
 
   .pagination-item {
     padding: 0 12px;

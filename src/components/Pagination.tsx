@@ -50,48 +50,52 @@ const Pagination: React.FC<Props> = (props) => {
       ? paginationRange[paginationRange.length - 1]
       : null;
   return (
-    <ul
-      className={classnames('pagination-container', { [className]: className })}
-    >
-      {/* Left navigation arrow */}
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === 1,
+    <div className="pag-box">
+      <ul
+        className={classnames('pagination-container', {
+          [className]: className,
         })}
-        onClick={onPrevious}
       >
-        <div className="arrow left" />
-      </li>
-      {paginationRange !== undefined &&
-        paginationRange.map((pageNumber) => {
-          // If the pageItem is a DOT, render the DOTS unicode character
-          if (pageNumber === DOTS) {
-            return <li className="pagination-item dots">&#8230;</li>;
-          }
+        {/* Left navigation arrow */}
+        <li
+          className={classnames('pagination-item', {
+            disabled: currentPage === 1,
+          })}
+          onClick={onPrevious}
+        >
+          <div className="arrow left" />
+        </li>
+        {paginationRange !== undefined &&
+          paginationRange.map((pageNumber) => {
+            // If the pageItem is a DOT, render the DOTS unicode character
+            if (pageNumber === DOTS) {
+              return <li className="pagination-item dots">&#8230;</li>;
+            }
 
-          // Render our Page Pills
-          return (
-            <li
-              className={classnames('pagination-item', {
-                selected: pageNumber === currentPage,
-              })}
-              key={pageNumber}
-              onClick={() => onPageChange(pageNumber)}
-            >
-              {pageNumber}
-            </li>
-          );
-        })}
-      {/*  Right Navigation arrow */}
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === lastPage,
-        })}
-        onClick={onNext}
-      >
-        <div className="arrow right" />
-      </li>
-    </ul>
+            // Render our Page Pills
+            return (
+              <li
+                className={classnames('pagination-item', {
+                  selected: pageNumber === currentPage,
+                })}
+                key={pageNumber}
+                onClick={() => onPageChange(pageNumber)}
+              >
+                {pageNumber}
+              </li>
+            );
+          })}
+        {/*  Right Navigation arrow */}
+        <li
+          className={classnames('pagination-item', {
+            disabled: currentPage === lastPage,
+          })}
+          onClick={onNext}
+        >
+          <div className="arrow right" />
+        </li>
+      </ul>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useContext } from 'react';
-import { BlogsContext } from '../context/blogsContext';
 import { UiContext } from '../context/uiContext';
 import { FilterContext } from '../context/filterContext';
 import Pagination from './Pagination';
@@ -12,7 +11,6 @@ import './posts.scss';
 let PageSize = 10;
 
 const PostsToShow: React.FC = () => {
-  const posts = useContext(BlogsContext);
   const uiConfig = useContext(UiContext);
   const filterResult = useContext(FilterContext);
 
@@ -40,7 +38,7 @@ const PostsToShow: React.FC = () => {
       <h3>Best Blog of the Year!</h3>
       <input onChange={searchHandler} placeholder="Search..." />
       <div>
-        <div>
+        <div className="alfa">
           <div className="postsbox">
             {currentData.map((item) => (
               <SinglePost
